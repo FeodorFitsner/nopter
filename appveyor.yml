@@ -3,7 +3,7 @@
 # Fix line endings in Windows. (runs before repo cloning)
 init:
   - git config --global core.autocrlf input
-  - ps: $OutputEncoding = New-Object -typename System.Text.UTF8Encoding
+  - ps: [Console]::OutputEncoding = [Text.Encoding]::Default
 
 # Test against these versions of Node.js.
 environment:
